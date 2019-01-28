@@ -1,0 +1,39 @@
+.action-container {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 75%;
+    display: inline-block;
+    background-color: white;
+}
+
+.btn-container {
+    padding: 20px;
+}
+
+.btn-container button {
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    border: none;
+    background-color: #7c0a02;
+    color: white;
+    font-size: 1em;
+}
+
+.btn-container button:hover {
+    background-color: #202124;
+    color: white;
+    transform: translateY(-0.35em);
+}
+
+.btn-divider {
+    width: 30px;
+    height: auto;
+    display: inline-block;
+}
+

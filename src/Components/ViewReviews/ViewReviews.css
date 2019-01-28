@@ -1,0 +1,21 @@
+.reviews-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.to-top-btn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #7c0a02;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
