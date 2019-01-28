@@ -63,6 +63,8 @@ typings/
 # Webstorm
 .idea/
 
+.idea
+
 # Webpack transpiled, minified content
 dist/
 server-dist/
