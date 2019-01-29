@@ -1,5 +1,4 @@
 import * as React from 'react'
-import App from './Components/App'
 import Home from './Components/Home/Home'
 import ViewReviews from './Components/ViewReviews/ViewReviews'
 

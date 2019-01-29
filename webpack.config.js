@@ -1,11 +1,27 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.tsx',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json']
   },
-  module: {
+    devServer: {
+      contentBase: './dist',
+      proxy: {
+          '/api': {
+              target: {
+                  host: "0.0.0.0",
+                  protocol: 'http:',
+                  port: 8080
+              },
+              pathRewrite: {
+                  '^/api': ''
+              }
+          }
+      }
+   },
+    module: {
     rules: [
       {
         test: /\.(js|jsx)$/,

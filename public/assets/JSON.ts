@@ -3,7 +3,8 @@ Wasn't sure if CORS properties were set on the server, and had no guaranteed kno
 would be tested on.
 So I ran the following command:
 
-$ curl -- header "x-api-key: H3TM28wjL8R4#HTnqk?c" https://shakespeare.podium.com/api/reviews
+$ curl --header "x-api-key: H3TM28wjL8R4#HTnqk?c" https://shakespeare.podium.com/api/reviews
+curl --header "x-api-key: H3TM28wjL8R4#HTnqk?c" https://shakespeare.podium.com/api/reviews/9783221620868
 
 This gave me the same response. I am using this as the response so that I guarantee the app will have data to operate
 with regardless of where the code was tested. The request to the server is set up but I am being blocked by CORS.

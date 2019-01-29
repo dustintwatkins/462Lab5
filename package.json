@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode production --port 8081",
+    "start": "webpack-dev-server --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },
@@ -24,8 +24,9 @@
     "style-loader": "^0.21.0",
     "typescript": "^2.9.2",
     "webpack": "^4.12.2",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-cli": "^3.2.1",
+    "webpack-command": "^0.4.2",
+    "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
     "@types/react": "^16.4.5",
