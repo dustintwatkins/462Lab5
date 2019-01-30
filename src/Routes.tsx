@@ -4,7 +4,6 @@ import ViewReviews from './Components/ViewReviews/ViewReviews'
 import LeaveReview from './Components/LeaveReview/LeaveReview'
 import Submitted from './Components/LeaveReview/Submitted'
 
-
 interface Route {
   [s: string]: JSX.Element
 }
