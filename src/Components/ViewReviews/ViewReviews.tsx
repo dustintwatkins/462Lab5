@@ -14,7 +14,6 @@ class ViewReviews extends React.Component {
   }
 
   render (): JSX.Element {
-    console.log('reviews', Model.get_instance().reviews)
     return (
       <section>
         <div className={'reviews-container'}>
