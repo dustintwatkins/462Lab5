@@ -2,7 +2,7 @@ import * as React from 'react'
 import Home from './Components/Home/Home'
 import ViewReviews from './Components/ViewReviews/ViewReviews'
 import LeaveReview from './Components/LeaveReview/LeaveReview'
-import Submitted from './Components/LeaveReview/Submitted'
+import Submitted from './Components/Submitted/Submitted'
 
 interface Route {
   [s: string]: JSX.Element

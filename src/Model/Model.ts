@@ -17,14 +17,11 @@ class Model {
   }
 
   public setReviews (reviews: object[]): void {
-    console.log('before adding', reviews)
-    if (reviews.length > 0) {
+    if (reviews && reviews.length > 0) {
       for (let i: number = 0; i < reviews.length; i++) {
-        console.log('hi', reviews[i])
         this._reviews.push(new Review(reviews[i]['rating'], reviews[i]['publish_date'], reviews[i]['id'], reviews[i]['body'], reviews[i]['author']))
       }
     }
-    console.log('after', this.reviews)
   }
 
 
