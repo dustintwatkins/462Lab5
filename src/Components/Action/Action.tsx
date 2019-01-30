@@ -1,12 +1,18 @@
 import * as React from 'react'
 import './Action.css'
 import ClientCommunicator from '../../ClientCommunicator/ClientCommunicator'
+import Model from '../../Model/Model'
 
 
 class Action extends React.Component<React.SFC<{}>> {
 
-  readReviews = () => {
-    const reviews = ClientCommunicator.getReviews()
+  leaveReview = async () => {
+    location.hash = '#leave-review'
+  }
+
+  readReviews = async () => {
+    Model.get_instance().clearReviews()
+    Model.get_instance().setReviews(await ClientCommunicator.getReviews())
     location.hash = '#read-reviews'
   }
 
@@ -20,7 +26,7 @@ class Action extends React.Component<React.SFC<{}>> {
           <div className={'btn-container'}>
             <button onClick={this.readReviews}>Read Reviews</button>
             <div className={'btn-divider'}/>
-            <button>Leave Review</button>
+            <button onClick={this.leaveReview}>Leave Review</button>
           </div>
         </div>
       </section>

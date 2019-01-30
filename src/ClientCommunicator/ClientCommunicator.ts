@@ -2,10 +2,10 @@
 const authToken = 'H3TM28wjL8R4#HTnqk?c'
 
 class ClientCommunicator {
-  private static server_url = 'https://shakespeare.podium.com/api/reviews'
+  private static server_url = 'https://shakespeare.podium.com/api'
 
   public static getReviews (): any {
-    const url: string = `${ClientCommunicator.server_url}/poll`
+    const url: string = `${this.server_url}/reviews`
     let headers = new Headers()
     headers.append('x-api-key', authToken)
 
@@ -16,7 +16,7 @@ class ClientCommunicator {
 
     return fetch(request)
       .then(response => {
-        return response
+        return response.json()
       })
       .catch((error) => {
         location.hash = ''

@@ -12,7 +12,7 @@
 }
 
 .btn-container {
-    padding: 20px;
+    padding: 10px 10px 40px;
 }
 
 .btn-container button {
@@ -25,14 +25,17 @@
     font-size: 1em;
 }
 
+.btn-container button {
+    transition: 0.3s;
+}
+
 .btn-container button:hover {
     background-color: #202124;
     color: white;
-    transform: translateY(-0.35em);
 }
 
 .btn-divider {
-    width: 30px;
+    width: 50px;
     height: auto;
     display: inline-block;
 }

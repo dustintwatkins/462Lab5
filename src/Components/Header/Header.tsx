@@ -1,7 +1,7 @@
 import * as React from 'react'
-import "./Header.css"
-
-const logo = 'public/assets/shakespeare1.png'
+import './Header.css'
+import ClientCommunicator from '../../ClientCommunicator/ClientCommunicator'
+import Model from '../../Model/Model'
 
 class Header extends React.Component {
 
@@ -9,7 +9,10 @@ class Header extends React.Component {
     location.hash = ''
   }
 
-  goToReviews = (): void => {
+  goToReviews = async (): Promise<void> => {
+    Model.get_instance().clearReviews()
+    Model.get_instance().setReviews(await ClientCommunicator.getReviews())
+    location.hash = '#read-reviews'
     location.hash = '#read-reviews'
   }
 
@@ -17,8 +20,7 @@ class Header extends React.Component {
     return (
      <section>
        <div className={'header'}>
-           <img src={logo}/>
-           <h2>Shakespeare</h2>
+           <h3>Shakespeare</h3>
          <div className={'header-right-container'}>
            <div className={'header-right'}>
              <h4 id={'go-home'} onClick={this.goToHome}>Home</h4>
