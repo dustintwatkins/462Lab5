@@ -1,12 +1,17 @@
-import Review from './Review'
+import Temperature from './Temperature'
+import ClientCommunicator from '../ClientCommunicator/ClientCommunicator'
+import Profile from './Profile'
 
 
 class Model {
-  static _instance: Model
-  private _reviews: Review[]
+  private static _instance: Model
+  private _temps: Temperature[]
+  private _violations: Temperature[]
+  private _profile: Profile
 
   private constructor () {
-    this._reviews = []
+    this._temps = []
+    this._violations = []
   }
 
   public static get_instance ():Model {
@@ -16,22 +21,48 @@ class Model {
     return Model._instance
   }
 
-  public setReviews (reviews: object[]): void {
-    if (reviews && reviews.length > 0) {
-      for (let i: number = 0; i < reviews.length; i++) {
-        this._reviews.push(new Review(reviews[i]['rating'], reviews[i]['publish_date'], reviews[i]['id'], reviews[i]['body'], reviews[i]['author']))
-      }
+  get profile (): Profile {
+    return this._profile
+  }
+
+  setProfile (profile: Profile) {
+    this._profile = profile
+  }
+
+  get temps (): Temperature[] {
+    return this._temps
+  }
+
+  setTemps (temps: Temperature[]) {
+    this._temps = temps
+  }
+
+  setViolations (temps: Temperature[]) {
+    this._violations = temps
+  }
+
+  get violations (): Temperature[] {
+    return this._violations
+  }
+
+  getLastThreeViolations (): Temperature[] {
+    if (this.violations[this.violations.length - 1] === undefined || null) {
+      return []
     }
+    return [this.violations[this.violations.length - 1], this.violations[this.violations.length - 2], this.violations[this.violations.length - 3]]
   }
 
-
-  get reviews (): Review[] {
-    return this._reviews
+  getMostRecentTemp (): Temperature {
+    return this.temps[0] ? this.temps[this.temps.length - 1] : null
   }
 
-  public clearReviews ():void {
-    this._reviews = []
+  getLastThreeTemps (): Temperature[] {
+    if (this.temps[this.temps.length - 1] === undefined || null) {
+      return []
+    }
+    return [this.temps[this.temps.length - 1], this.temps[this.temps.length - 2], this.temps[this.temps.length - 3]]
   }
 }
 
 export default Model
+

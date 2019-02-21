@@ -12,29 +12,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
-    },
-    "testMatch": [
-      "**/src/**/*.test.{ts,tsx,js}"
-    ],
-    "preset": "ts-jest"
-  },
   "devDependencies": {
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.19",
@@ -49,7 +26,6 @@
     "jest": "^24.0.0",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
-    "ts-jest": "^23.10.5",
     "typescript": "^2.9.2",
     "webpack": "^4.12.2",
     "webpack-cli": "^3.2.1",

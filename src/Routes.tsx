@@ -1,8 +1,6 @@
 import * as React from 'react'
 import Home from './Components/Home/Home'
-import ViewReviews from './Components/ViewReviews/ViewReviews'
-import LeaveReview from './Components/LeaveReview/LeaveReview'
-import Submitted from './Components/Submitted/Submitted'
+import Profile from './Components/Profile/Profile'
 
 interface Route {
   [s: string]: JSX.Element
@@ -10,9 +8,7 @@ interface Route {
 
 const routes: Route = {
   '': <Home/>,
-  '#read-reviews': <ViewReviews/>,
-  '#leave-review': <LeaveReview/>,
-  '#submitted': <Submitted/>
+  '#profile': <Profile/>
 }
 
 export default routes

@@ -38,4 +38,10 @@ input[type=submit]:hover {
 .review-container {
     background-color: #edf0f2;
     text-align: center;
+    display: flex;
+}
+
+.divider {
+    width: 5%;
+    height: auto;
 }

@@ -19,7 +19,6 @@
 .header-right {
     float: right;
     display: flex;
-    margin-right: 5%;
 }
 
 .header img {
