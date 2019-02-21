@@ -1,1 +1,18 @@
+URL to repo: https://github.com/dustintwatkins/462Lab5
+URL to wovyn_base: https://github.com/dustintwatkins/462Lab5/blob/master/wovyn_base.krl
+URL to sensor_profile: https://github.com/dustintwatkins/462Lab5/blob/master/sensor_profile.krl
+URL to temperature_store: https://github.com/dustintwatkins/462Lab5/blob/master/temperature_store.krl
 
+Questions
+
+1. What design decisions did you make in your rulesets that made this assignment easier or harder? Why? 
+
+Breaking up rulesets into modules made it very easy to have different rulesets communicate. Forexample having threshold being set from another module in the sensor profile was simple because of the modular design of the rulesets.
+
+2. Explain how the sensor_profile ruleset isolates state and processes regarding the sensor profile from other rulesets. 
+
+Because no other ruleset has write access to the profile, it is isolated. One other ruleset has access to read the entity variables, but besides that, the ruleset is isolated from other rulesets and has no dependencies.
+
+3. Make sure that sensor_profile is providing/sharing the profile. Then the ruleset in other rulesets by `use module sensor_profile`. Then you can call the get_profile function and access the data required.
+
+4. You could write setter functions in sensor_profile that would take parameters of the values you want to set in the sensor_profile.
